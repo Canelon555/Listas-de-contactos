@@ -1,0 +1,268 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+
+body {
+background-color: whitesmoke;
+font-family: 'Times New Roman', Times, serif;
+padding-top: 4rem;
+height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+overflow-y: hidden;
+background-image: url(cabinatelefonica.avif);
+opacity: 90%;
+}
+
+input {
+  outline: none;
+  border-radius: 0.1rem;
+  height: 1.2rem;
+  width: 10rem;
+  border: 0;
+  background-color: white(206, 160, 218);
+  margin-left: 2rem;
+  padding: 0.1rem;
+  font-size: 1rem;
+}
+
+
+
+#title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+}
+
+#form {
+  box-shadow: 2px 2px 10px black;
+  background: linear-gradient(to bottom, #0074D9, #00A8FF);
+  padding: 10px;
+  width: 18rem;    
+  text-align: center;
+  height: fit-content;
+}
+
+#form-btn {
+  background-color: rgb(45, 134, 45);
+  width: 11rem;
+  padding: 0.25rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+  cursor: pointer;
+  margin: 0.5rem;
+  border-radius: 2px;
+}
+
+#form-btn:disabled {
+background-color: white;
+}
+
+.form-input-container {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  display: none;
+}
+
+#list {
+  background: linear-gradient(to bottom, #0074D9, #00A8FF);
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: 50%;
+  height: 40%;
+  padding-left: 0;
+  overflow: auto;
+  scroll-behavior: smooth;
+  height: 10rem;
+  padding: 0.5rem;
+  border: solid 0.1rem;
+  margin: 1rem;
+}
+
+#list::-webkit-scrollbar {
+  width: 6px;
+}
+
+#list::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 10px;
+  transition: all 0.175s ease-in-out;
+}
+
+#list::-webkit-slider-thumb:hover {
+  background-color: black;
+}
+
+#list::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.info {
+  display: none;
+  color: black;
+  margin-bottom: 0;
+  font-size: 0.85rem;
+}
+
+.delete-btn {
+  background-color: transparent;
+  transition: all 0.175s ease-in-out;
+  color: red;
+  cursor: pointer;
+}
+
+.delete-btn:active{
+  background-color: red;
+  color: white;
+}
+
+.edit-btn {
+  background-color: transparent;
+  transition: all 0.175s ease-in-out;
+  color: rgb(0, 78, 0);
+  cursor: pointer;
+}
+
+.edit-btn:active {
+  background-color: green;
+  color: white;
+}
+
+.edit-icon, .delete-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.contact  {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid black;
+}
+
+.form-input {
+  width: 11rem;
+  padding: 0.25rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+  cursor: pointer;
+  margin: 0.5rem;
+  border-radius: 2px;
+}
+
+.form-input:focus {
+  outline: none
+}
+
+.correct, .correct:focus {
+  outline: 2px solid green;
+}
+
+.incorrect, .incorrect:focus {
+  outline: 2px solid red;
+}
+
+.show {
+  display: flex;
+}
+
+.border-edit {
+  outline: 2px solid black;
+}
+
+.border-edit:focus {
+  outline: 2px solid black;
+}
+
+.edit-error {
+  text-decoration-line: line-through;
+  text-decoration-color: red;
+}
+
+@media (min-width: 200px) {
+  #list {
+    width: 100%;
+  }
+  #form {
+    width: 100%;
+  }
+}
+
+@media (min-width: 320px) {
+  #list {
+    width: 90%;
+  }
+  #form {
+    width: 17rem;
+  }
+}
+
+@media (min-width: 768px){
+  #list {
+    width: 60%;
+  }
+  #form {
+    width: 18rem;
+  }
+  input {
+    width: 12rem;
+  }
+  .contact {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px){
+  #list {
+    width: 50%;
+  }
+
+  #form {
+    width: 18rem;
+  }
+
+  .contact {
+      font-size: 18px;
+  }
+}
+
+@media (min-width: 2560px){
+ 
+  #list {
+      height: 30%;
+  }
+
+  #form {
+    width: 22rem;
+    height: 10rem;
+  }
+
+  .contact{
+      font-size: 25px;
+  }
+
+  body{
+      padding-top: 20rem
+  }
+  
+}
